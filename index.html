@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thyagu Prasath — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#">Thyagu Prasath</a>
+    <nav>
+      <a href="#work">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact" class="btn">Contact</a>
+      <button id="theme-toggle" class="theme-btn">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Cloud & Software Developer</h1>
+      <p class="intro-text">
+        Final year B.Tech CSE (Cloud Computing) student at Alliance University. Skilled in Python, Java, and cloud technologies, with a focus on building practical solutions.
+      </p>
+      <a href="#work" class="cta">See my work</a>
+    </section>
+
+    <section id="certifications" class="certifications-section">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <a href="https://www.credly.com/badges/9d9f0266-d86a-40b4-98c9-1b6f5edea727/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-card">
+          <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
+          <span>2025</span>
+        </a>
+        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=58DEC0047C8F93B782575695711824C2676496858854823816C22F1F809DD169" target="_blank" rel="noopener noreferrer" class="cert-card">
+          <h3>Oracle AI Foundations Associate</h3>
+          <span>2025</span>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/verify/1RU3JJF6OAJ3" target="_blank" rel="noopener noreferrer" class="cert-card">
+          <h3>Configuration Management & the Cloud</h3>
+          <span>Coursera (Google) - 2025</span>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/verify/FDBN6YSH304J" target="_blank" rel="noopener noreferrer" class="cert-card">
+          <h3>Information Technology & AWS Cloud</h3>
+          <span>Coursera (AWS) - 2025</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="work" class="grid">
+      <h2>Projects</h2>
+      <article class="card">
+        <a href="https://github.com/thyaguprasath/Cloud-Storage-Cost-Estimator" target="_blank" rel="noopener noreferrer">
+          <h3>Cloud Storage Cost Estimator</h3>
+        </a>
+        <p>A command-line tool built in Python to estimate and compare storage costs across major cloud providers.</p>
+      </article>
+      <article class="card">
+        <a href="https://github.com/thyaguprasath/JFSD_CC_771" target="_blank" rel="noopener noreferrer">
+          <h3>Expense Management System</h3>
+        </a>
+        <p>A desktop application built with Java for tracking and managing personal or business expenses.</p>
+      </article>
+      <article class="card">
+        <a href="https://github.com/thyaguprasath/Cloud-Service-Status-Monitor" target="_blank" rel="noopener noreferrer">
+          <h3>Cloud Service Status Monitor</h3>
+        </a>
+        <p>A Python-based utility to check and report the operational status of various cloud services in real-time.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <ul class="contact-list">
+        <li><strong>Location:</strong> Bangalore, Karnataka</li>
+        <li><strong>Phone:</strong> <a href="tel:+919513142870">+91 9513142870</a></li>
+        <li><strong>Email:</strong> <a href="mailto:pthyagubtech22@ced.alliance.edu.in">pthyagubtech22@ced.alliance.edu.in</a> (Official)</li>
+        <li><strong>Email:</strong> <a href="mailto:thyaguprasath470@gmail.com">thyaguprasath470@gmail.com</a> (Personal)</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thyagu-prasath-b0a5a4286" target="_blank" rel="noopener noreferrer">in/thyagu-prasath</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/thyagupras" target="_blank" rel="noopener noreferrer">github.com/thyagupras</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Thyagu Prasath</footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const docElement = document.documentElement;
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
+      docElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    themeToggle.addEventListener('click', () => {
+      if (docElement.hasAttribute('data-theme')) {
+        docElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.textContent = '☀️';
+      } else {
+        docElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
